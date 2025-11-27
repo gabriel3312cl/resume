@@ -4,76 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Serra - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts: Merriweather (Serif for Harvard style) and Inter (Sans for modern readability) -->
+    <!-- NYT Style Font: Libre Baskerville -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
-
-    <!-- Data Source -->
-    <script src="data.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="cv-container">
-        <!-- Header Section -->
-        <header class="cv-header">
-            <div class="header-top">
-                <h1 id="cv-name"></h1>
-                <div class="lang-switcher">
-                    <button data-lang="en" class="active">EN</button>
-                    <span class="divider">|</span>
-                    <button data-lang="es">ES</button>
-                </div>
-            </div>
-            <h2 id="cv-title"></h2>
-            <p id="cv-tagline" class="tagline"></p>
-            <div id="cv-contact" class="contact-info"></div>
-        </header>
-
-        <div class="cv-body">
-            <!-- Main Column (Experience, Projects) -->
-            <main class="main-column">
-                <section class="cv-section" id="section-about">
-                    <h3 class="section-title"></h3>
-                    <p id="about-text" class="section-content"></p>
-                </section>
-
-                <section class="cv-section" id="section-experience">
-                    <h3 class="section-title" data-label="experience">Experience</h3>
-                    <div id="experience-list" class="timeline"></div>
-                </section>
-
-                <section class="cv-section" id="section-projects">
-                    <h3 class="section-title" data-label="projects">Projects</h3>
-                    <div id="projects-grid" class="projects-grid"></div>
-                </section>
-            </main>
-
-            <!-- Side Column (Skills, Education) -->
-            <aside class="side-column">
-                <section class="cv-section" id="section-education">
-                    <h3 class="section-title" data-label="education">Education</h3>
-                    <div id="education-list"></div>
-                </section>
-
-                <section class="cv-section" id="section-skills">
-                    <h3 class="section-title" data-label="skills">Skills</h3>
-                    <div id="skills-list"></div>
-                </section>
-
-                <section class="cv-section" id="section-certifications">
-                    <h3 class="section-title" data-label="certifications">Certifications</h3>
-                    <ul id="certifications-list"></ul>
-                </section>
-            </aside>
-        </div>
-
-        <footer class="cv-footer">
-            <p>&copy; 2025 Gabriel Serra. Generated dynamically.</p>
-        </footer>
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
     </div>
 
-    <!-- Script to hydrate the view -->
+    <div class="container">
+        <!-- Sidebar: Profile, Contact, Skills -->
+        <aside id="sidebar">
+            <div class="sidebar-sticky">
+                <!-- Content injected by JS -->
+            </div>
+        </aside>
+
+        <!-- Main Content: Bio, Experience, Projects -->
+        <main id="content">
+            <!-- Content injected by JS -->
+        </main>
+    </div>
+
+    <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

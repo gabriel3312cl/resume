@@ -1,150 +1,139 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Initialization
-    const defaultLang = localStorage.getItem('cv-lang') || 'en';
-    let currentLang = defaultLang;
+    const data = window.cvData;
+    let currentLang = localStorage.getItem('cv_lang') || 'en';
 
-    // Dictionary for Section Titles (as I didn't include them in the data model)
-    const dictionary = {
-        en: {
-            experience: "Experience",
-            projects: "Projects",
-            skills: "Technical Skills",
-            education: "Education",
-            certifications: "Certifications",
-            contact: "Contact",
-            about: "About Me"
-        },
-        es: {
-            experience: "Experiencia Laboral",
-            projects: "Proyectos Destacados",
-            skills: "Habilidades Técnicas",
-            education: "Educación",
-            certifications: "Certificaciones",
-            contact: "Contacto",
-            about: "Perfil Profesional"
-        }
-    };
+    // Elements
+    const sidebarEl = document.querySelector('#sidebar .sidebar-sticky');
+    const contentEl = document.getElementById('content');
+    const langBtns = document.querySelectorAll('.lang-btn');
 
-    // 2. DOM Elements
-    const els = {
-        name: document.getElementById('cv-name'),
-        title: document.getElementById('cv-title'),
-        tagline: document.getElementById('cv-tagline'),
-        contact: document.getElementById('cv-contact'),
-        aboutTitle: document.querySelector('#section-about .section-title'),
-        aboutText: document.getElementById('about-text'),
-        expList: document.getElementById('experience-list'),
-        projGrid: document.getElementById('projects-grid'),
-        eduList: document.getElementById('education-list'),
-        skillList: document.getElementById('skills-list'),
-        certList: document.getElementById('certifications-list'),
-        sectionTitles: document.querySelectorAll('.section-title[data-label]'),
-        langBtns: document.querySelectorAll('.lang-switcher button')
-    };
+    // Initial Render
+    render(currentLang);
+    updateLangButtons(currentLang);
 
-    // 3. Render Function
-    function render(lang) {
-        const data = window.cvData[lang];
-        if (!data) return console.error('Language data not found');
-
-        // Update Global UI
-        document.documentElement.lang = lang;
-        els.langBtns.forEach(btn => {
-            if(btn.dataset.lang === lang) btn.classList.add('active');
-            else btn.classList.remove('active');
-        });
-
-        // Header
-        els.name.textContent = data.profile.name;
-        els.title.textContent = data.profile.title;
-        els.tagline.textContent = data.profile.tagline;
-
-        // Contact (Formatted nicely)
-        els.contact.innerHTML = `
-            <span>${data.profile.contact.location}</span> &bull;
-            <a href="mailto:${data.profile.contact.email}">${data.profile.contact.email}</a> &bull;
-            <span>${data.profile.contact.phone}</span>
-        `;
-
-        // Section Titles
-        els.sectionTitles.forEach(titleEl => {
-            const labelKey = titleEl.dataset.label;
-            if (dictionary[lang][labelKey]) {
-                titleEl.textContent = dictionary[lang][labelKey];
-            }
-        });
-        els.aboutTitle.textContent = dictionary[lang].about;
-
-        // About
-        els.aboutText.textContent = data.about.description;
-
-        // Experience
-        els.expList.innerHTML = data.experience.map(job => `
-            <div class="exp-item">
-                <div class="exp-header">
-                    <h4 class="exp-role">${job.role}</h4>
-                    <span class="exp-period">${job.period}</span>
-                </div>
-                <div class="exp-company">${job.company}</div>
-                <ul class="exp-responsibilities">
-                    ${job.responsibilities.map(r => `<li>${r}</li>`).join('')}
-                </ul>
-            </div>
-        `).join('');
-
-        // Projects
-        els.projGrid.innerHTML = data.projects.map(proj => `
-            <div class="project-card">
-                <div class="project-header">
-                    <h4 class="project-name">${proj.name}</h4>
-                </div>
-                <p class="project-summary">${proj.summary}</p>
-                <div class="project-tech">
-                    ${proj.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
-                </div>
-                <p class="project-desc">${proj.description}</p>
-            </div>
-        `).join('');
-
-        // Education
-        els.eduList.innerHTML = data.education.map(edu => `
-            <div class="edu-item">
-                <h4 class="edu-degree">${edu.degree}</h4>
-                <div class="edu-institution">${edu.institution}</div>
-                <div class="edu-period">${edu.period}</div>
-                ${edu.achievements ? `<div class="edu-achievements">${edu.achievements}</div>` : ''}
-            </div>
-        `).join('');
-
-        // Skills (Grouped)
-        els.skillList.innerHTML = Object.entries(data.skills).map(([category, items]) => `
-            <div class="skill-group">
-                <h4 class="skill-category">${category}</h4>
-                <p class="skill-items">${items.join(', ')}</p>
-            </div>
-        `).join('');
-
-        // Certifications
-        els.certList.innerHTML = data.certifications.map(cert => `
-            <li>${cert}</li>
-        `).join('');
-    }
-
-    // 4. Event Listeners
-    els.langBtns.forEach(btn => {
+    // Event Listeners
+    langBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            const newLang = btn.dataset.lang;
-            currentLang = newLang;
-            localStorage.setItem('cv-lang', newLang);
-            render(newLang);
+            const lang = btn.dataset.lang;
+            if (lang !== currentLang) {
+                currentLang = lang;
+                localStorage.setItem('cv_lang', lang);
+                render(currentLang);
+                updateLangButtons(currentLang);
+            }
         });
     });
 
-    // 5. Initial Render
-    if (window.cvData) {
-        render(currentLang);
-    } else {
-        console.error('CV Data not loaded!');
-        els.name.textContent = "Error loading data.js";
+    function updateLangButtons(lang) {
+        langBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+    }
+
+    function render(lang) {
+        const d = data[lang];
+        
+        // --- Sidebar Render ---
+        let sidebarHTML = `
+            <div class="profile-section">
+                <!-- Placeholder for Image - in a real scenario this would be a URL -->
+                <img src="https://ui-avatars.com/api/?name=Gabriel+Serra&background=1d1d1f&color=fff&size=200" alt="${d.profile.name}" class="profile-photo">
+                <h1 class="profile-name">${d.profile.name}</h1>
+                <div class="profile-title">${d.profile.title}</div>
+                <div class="profile-tagline">${d.profile.tagline}</div>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span> <a href="mailto:${d.profile.contact.email}">${d.profile.contact.email}</a>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span> <span>${d.profile.contact.phone}</span>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span> <span>${d.profile.contact.location}</span>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <h3 class="section-title">Skills</h3>
+                <ul class="skills-list">
+                    ${Object.entries(d.skills).map(([category, skills]) => `
+                        <li class="skill-category">
+                            <div class="skill-category-title">${category}</div>
+                            <div class="skill-tags">
+                                ${skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                            </div>
+                        </li>
+                    `).join('')}
+                </ul>
+            </div>
+            
+            <div class="skills-section">
+                 <h3 class="section-title">Certifications</h3>
+                 <ul class="skills-list">
+                    ${d.certifications.map(cert => `
+                        <li style="margin-bottom: 8px; font-size: 0.9rem; color: #424245;">• ${cert}</li>
+                    `).join('')}
+                 </ul>
+            </div>
+        `;
+        sidebarEl.innerHTML = sidebarHTML;
+
+
+        // --- Main Content Render ---
+        let contentHTML = `
+            <section class="about-section">
+                <h2 class="section-title">${d.about.title}</h2>
+                <p>${d.about.description}</p>
+            </section>
+
+            <section class="experience-section">
+                <h2 class="section-title">${lang === 'en' ? 'Experience' : 'Experiencia'}</h2>
+                ${d.experience.map(job => `
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="role-title">${job.role}</div>
+                            <div class="period">${job.period}</div>
+                        </div>
+                        <div class="company-name">${job.company}</div>
+                        <div class="description-text">
+                            <ul style="padding-left: 20px; margin-top: 10px;">
+                                ${job.responsibilities.map(res => `<li>${res}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                `).join('')}
+            </section>
+
+            <section class="projects-section">
+                <h2 class="section-title">${lang === 'en' ? 'Projects' : 'Proyectos'}</h2>
+                ${d.projects.map(proj => `
+                    <div class="project-item">
+                        <div class="project-header">
+                            <div class="project-name">${proj.name}</div>
+                            <div class="tech-stack">${proj.tech.join(' • ')}</div>
+                        </div>
+                        <div class="company-name">${proj.summary}</div>
+                        <div class="description-text">${proj.description}</div>
+                    </div>
+                `).join('')}
+            </section>
+
+            <section class="education-section">
+                <h2 class="section-title">${lang === 'en' ? 'Education' : 'Educación'}</h2>
+                ${d.education.map(edu => `
+                    <div class="education-item">
+                        <div class="education-header">
+                            <div class="institution">${edu.institution}</div>
+                            <div class="period">${edu.period}</div>
+                        </div>
+                        <div class="degree">${edu.degree}</div>
+                        <div class="description-text">${edu.achievements}</div>
+                    </div>
+                `).join('')}
+            </section>
+        `;
+        contentEl.innerHTML = contentHTML;
     }
 });
