@@ -48,7 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span>📧</span> <a href="mailto:${d.profile.contact.email}">${d.profile.contact.email}</a>
                 </div>
                 <div class="contact-item">
-                    <span>📱</span> <span>${d.profile.contact.phone}</span>
+                    <span>💼</span> <a href="${d.profile.contact.linkedin}" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <span>🐈</span> <a href="${d.profile.contact.github}" target="_blank">GitHub</a>
                 </div>
                 <div class="contact-item">
                     <span>📍</span> <span>${d.profile.contact.location}</span>
@@ -78,9 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="accordion-item ${isOpen ? 'open' : ''}" id="${id}">
                 <button class="accordion-header" aria-expanded="${isOpen}" aria-controls="${id}-content">
                     <span class="accordion-title">${title}</span>
-                    <span class="accordion-icon">▼</span>
+                    <span class="accordion-icon">▲</span>
                 </button>
-                <div class="accordion-content" id="${id}-content" style="${isOpen ? 'display: block;' : 'display: none;'}">
+                <div class="accordion-content" id="${id}-content">
                     <div class="accordion-body">
                         ${contentHTML}
                     </div>
@@ -185,11 +188,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Toggle current
                 if (isOpen) {
                     item.classList.remove('open');
-                    content.style.display = 'none';
                     header.setAttribute('aria-expanded', 'false');
                 } else {
                     item.classList.add('open');
-                    content.style.display = 'block';
                     header.setAttribute('aria-expanded', 'true');
                 }
             });

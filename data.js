@@ -6,10 +6,10 @@ window.cvData = {
         "profile": {
             "name": "Gabriel Serra",
             "title": "Full Stack Developer & DevOps Engineer",
-            "tagline": "Building and deploying high-quality software and infrastructure.",
             "contact": {
-                "phone": "+569 3514 5852",
                 "email": "gabrielserraquiroga@gmail.com",
+                "linkedin": "https://www.linkedin.com/in/gabriel-serra-a4abab348/",
+                "github": "https://github.com/gabriel3312cl",
                 "location": "Chile"
             }
         },
@@ -236,8 +236,9 @@ window.cvData = {
             "title": "Full Stack Developer & DevOps Engineer",
             "tagline": "Construyendo y desplegando software e infraestructura de alta calidad.",
             "contact": {
-                "phone": "+569 3514 5852",
                 "email": "gabrielserraquiroga@gmail.com",
+                "linkedin": "https://www.linkedin.com/in/gabriel-serra-a4abab348/",
+                "github": "https://github.com/gabriel3312cl",
                 "location": "Chile"
             }
         },

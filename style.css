@@ -29,6 +29,7 @@ a:hover {
 .container {
     display: grid;
     grid-template-columns: 320px 1fr; /* Fixed sidebar, flexible content */
+    align-items: start;
     gap: 40px;
     max-width: 1200px;
     margin: 40px auto;
@@ -194,16 +195,23 @@ a:hover {
     font-size: 0.8rem;
     color: #86868b;
     transition: transform 0.3s ease;
+    transform: rotate(180deg); /* Point up when closed */
 }
 
 .accordion-item.open .accordion-icon {
-    transform: rotate(180deg);
+    transform: rotate(0deg); /* Point down when open */
 }
 
 .accordion-content {
     border-top: 1px solid #f0f0f0;
     background: #fff;
-    /* display is toggled by JS */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.accordion-item.open .accordion-content {
+    max-height: 2000px; /* Large enough for any content */
 }
 
 .accordion-body {
