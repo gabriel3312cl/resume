@@ -147,60 +147,145 @@ a:hover {
 
 /* Main Content Styles */
 #content {
+    background: transparent;
+    /* Removed padding/shadow container to let accordions float */
+}
+
+/* Accordion Styles */
+.accordion-item {
     background: #ffffff;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02); /* Very subtle shadow */
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
 }
 
-.about-section {
-    font-size: 1.1rem;
+.accordion-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+    transition: background-color 0.2s ease;
+}
+
+.accordion-header:hover {
+    background-color: #fafafa;
+}
+
+.accordion-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
     color: #1d1d1f;
-    margin-bottom: 50px;
-    line-height: 1.7;
 }
 
+.accordion-icon {
+    font-size: 0.8rem;
+    color: #86868b;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.open .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    border-top: 1px solid #f0f0f0;
+    background: #fff;
+    /* display is toggled by JS */
+}
+
+.accordion-body {
+    padding: 24px;
+    color: #1d1d1f;
+    line-height: 1.6;
+}
+
+/* Item Styles inside Accordion */
 .experience-item, .project-item, .education-item {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.experience-item:last-child, .project-item:last-child, .education-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .experience-header, .project-header, .education-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     flex-wrap: wrap;
     gap: 10px;
 }
 
 .role-title, .project-name, .degree {
-    font-size: 1.25rem;
-    font-weight: 700;
-    font-family: 'Libre Baskerville', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; /* Clean sans for items */
+    color: #1d1d1f;
 }
 
 .company-name, .institution {
-    font-weight: 600;
+    font-weight: 500;
     color: #424245;
+    margin-bottom: 8px;
 }
 
 .period {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #86868b;
     font-feature-settings: "tnum";
     font-variant-numeric: tabular-nums;
+    white-space: nowrap;
 }
 
 .description-text {
     color: #424245;
-    margin-top: 10px;
-    font-size: 1rem;
+    font-size: 0.95rem;
+}
+
+.description-text ul {
+    margin-bottom: 0;
+}
+
+.description-text li {
+    margin-bottom: 6px;
 }
 
 .tech-stack {
-    margin-top: 10px;
-    font-size: 0.85rem;
+    margin-top: 4px;
+    font-size: 0.8rem;
     color: #86868b;
+    font-weight: 500;
+}
+
+/* Certs Styling */
+.cert-provider strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #1d1d1f;
+}
+.cert-provider ul {
+    margin-top: 0;
+    padding-left: 20px;
+    color: #424245;
+    font-size: 0.95rem;
 }
 
 /* Language Switcher */
@@ -262,10 +347,7 @@ a:hover {
     }
     
     #content {
-        padding: 25px;
-        border-radius: 0;
-        box-shadow: none;
-        background: transparent;
+        padding: 0 20px;
     }
 }
 
@@ -286,5 +368,24 @@ a:hover {
     }
     .language-switcher {
         display: none;
+    }
+    
+    /* Print: Expand all accordions */
+    .accordion-content {
+        display: block !important;
+        border: none;
+    }
+    .accordion-header {
+        pointer-events: none;
+        padding-left: 0;
+        border-bottom: 2px solid #000;
+    }
+    .accordion-icon {
+        display: none;
+    }
+    .accordion-item {
+        box-shadow: none;
+        break-inside: avoid;
+        margin-bottom: 30px;
     }
 }

@@ -68,72 +68,131 @@ document.addEventListener('DOMContentLoaded', () => {
                     `).join('')}
                 </ul>
             </div>
-            
-            <div class="skills-section">
-                 <h3 class="section-title">Certifications</h3>
-                 <ul class="skills-list">
-                    ${d.certifications.map(cert => `
-                        <li style="margin-bottom: 8px; font-size: 0.9rem; color: #424245;">• ${cert}</li>
-                    `).join('')}
-                 </ul>
-            </div>
         `;
         sidebarEl.innerHTML = sidebarHTML;
 
 
-        // --- Main Content Render ---
-        let contentHTML = `
-            <section class="about-section">
-                <h2 class="section-title">${d.about.title}</h2>
-                <p>${d.about.description}</p>
-            </section>
+        // --- Main Content Render (Accordion Style) ---
+        // Helper to create accordion item
+        const createAccordionItem = (id, title, contentHTML, isOpen = false) => `
+            <div class="accordion-item ${isOpen ? 'open' : ''}" id="${id}">
+                <button class="accordion-header" aria-expanded="${isOpen}" aria-controls="${id}-content">
+                    <span class="accordion-title">${title}</span>
+                    <span class="accordion-icon">▼</span>
+                </button>
+                <div class="accordion-content" id="${id}-content" style="${isOpen ? 'display: block;' : 'display: none;'}">
+                    <div class="accordion-body">
+                        ${contentHTML}
+                    </div>
+                </div>
+            </div>
+        `;
 
-            <section class="experience-section">
-                <h2 class="section-title">${lang === 'en' ? 'Experience' : 'Experiencia'}</h2>
-                ${d.experience.map(job => `
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <div class="role-title">${job.role}</div>
-                            <div class="period">${job.period}</div>
-                        </div>
-                        <div class="company-name">${job.company}</div>
-                        <div class="description-text">
-                            <ul style="padding-left: 20px; margin-top: 10px;">
-                                ${job.responsibilities.map(res => `<li>${res}</li>`).join('')}
+        // 1. Professional Profile
+        const aboutHTML = `
+            <p>${d.about.description}</p>
+        `;
+
+        // 2. Experience
+        const experienceHTML = d.experience.map(job => `
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="role-title">${job.role}</div>
+                    <div class="period">${job.period}</div>
+                </div>
+                <div class="company-name">${job.company}</div>
+                <div class="description-text">
+                    <ul style="padding-left: 20px; margin-top: 10px;">
+                        ${job.responsibilities.map(res => `<li>${res}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+        `).join('');
+
+        // 3. Projects
+        const projectsHTML = d.projects.map(proj => `
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-name">${proj.name}</div>
+                    <div class="tech-stack">${proj.tech.join(' • ')}</div>
+                </div>
+                <div class="company-name">${proj.summary}</div>
+                <div class="description-text">${proj.description}</div>
+            </div>
+        `).join('');
+
+        // 4. Education
+        const educationHTML = d.education.map(edu => `
+            <div class="education-item">
+                <div class="education-header">
+                    <div class="institution">${edu.institution}</div>
+                    <div class="period">${edu.period}</div>
+                </div>
+                <div class="degree">${edu.degree}</div>
+                ${edu.achievements ? `<div class="description-text">${edu.achievements}</div>` : ''}
+            </div>
+        `).join('');
+
+         // 5. Certifications & Courses
+         const certsHTML = `
+            <div class="certs-container">
+                <div class="certs-group">
+                    <h4>${d.certifications.title}</h4>
+                    ${d.certifications.list.map(grp => `
+                        <div class="cert-provider">
+                            <strong>${grp.name}</strong>
+                            <ul>
+                                ${grp.items.map(i => `<li>${i}</li>`).join('')}
                             </ul>
                         </div>
-                    </div>
-                `).join('')}
-            </section>
-
-            <section class="projects-section">
-                <h2 class="section-title">${lang === 'en' ? 'Projects' : 'Proyectos'}</h2>
-                ${d.projects.map(proj => `
-                    <div class="project-item">
-                        <div class="project-header">
-                            <div class="project-name">${proj.name}</div>
-                            <div class="tech-stack">${proj.tech.join(' • ')}</div>
+                    `).join('')}
+                </div>
+                <div class="certs-group" style="margin-top: 20px;">
+                     <h4>${d.courses.title}</h4>
+                    ${d.courses.list.map(grp => `
+                        <div class="cert-provider">
+                            <strong>${grp.name}</strong>
+                            <ul>
+                                ${grp.items.map(i => `<li>${i}</li>`).join('')}
+                            </ul>
                         </div>
-                        <div class="company-name">${proj.summary}</div>
-                        <div class="description-text">${proj.description}</div>
-                    </div>
-                `).join('')}
-            </section>
+                    `).join('')}
+                </div>
+            </div>
+         `;
 
-            <section class="education-section">
-                <h2 class="section-title">${lang === 'en' ? 'Education' : 'Educación'}</h2>
-                ${d.education.map(edu => `
-                    <div class="education-item">
-                        <div class="education-header">
-                            <div class="institution">${edu.institution}</div>
-                            <div class="period">${edu.period}</div>
-                        </div>
-                        <div class="degree">${edu.degree}</div>
-                        <div class="description-text">${edu.achievements}</div>
-                    </div>
-                `).join('')}
-            </section>
+        // Combine all into the container
+        contentEl.innerHTML = `
+            ${createAccordionItem('section-about', d.about.title, aboutHTML, true)}
+            ${createAccordionItem('section-exp', lang === 'en' ? 'Experience' : 'Experiencia', experienceHTML, false)}
+            ${createAccordionItem('section-proj', lang === 'en' ? 'Projects' : 'Proyectos', projectsHTML, false)}
+            ${createAccordionItem('section-edu', lang === 'en' ? 'Education' : 'Educación', educationHTML, false)}
+            ${createAccordionItem('section-certs', lang === 'en' ? 'Certifications & Courses' : 'Certificaciones y Cursos', certsHTML, false)}
         `;
-        contentEl.innerHTML = contentHTML;
+
+        // Re-attach listeners for the new accordion items
+        attachAccordionListeners();
+    }
+
+    function attachAccordionListeners() {
+        const headers = document.querySelectorAll('.accordion-header');
+        headers.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const content = item.querySelector('.accordion-content');
+                const isOpen = item.classList.contains('open');
+
+                // Toggle current
+                if (isOpen) {
+                    item.classList.remove('open');
+                    content.style.display = 'none';
+                    header.setAttribute('aria-expanded', 'false');
+                } else {
+                    item.classList.add('open');
+                    content.style.display = 'block';
+                    header.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
     }
 });
