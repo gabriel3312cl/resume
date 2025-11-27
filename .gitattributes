@@ -1,0 +1,9 @@
+# Set default behavior for line endings
+* text=auto
+
+# Explicitly set line endings for specific file types to LF (Unix-style)
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf
