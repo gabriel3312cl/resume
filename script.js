@@ -1,75 +1,198 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const langEN = document.getElementById('lang-en');
-    const langES = document.getElementById('lang-es');
+    const data = window.cvData;
+    let currentLang = localStorage.getItem('cv_lang') || 'en';
 
-    const setLanguage = (lang) => {
-        document.documentElement.lang = lang;
-        localStorage.setItem('language', lang);
+    // Elements
+    const sidebarEl = document.querySelector('#sidebar .sidebar-sticky');
+    const contentEl = document.getElementById('content');
+    const langBtns = document.querySelectorAll('.lang-btn');
 
-        document.querySelectorAll('[data-lang-en]').forEach(el => {
-            const text = el.getAttribute(`data-lang-${lang}`);
-            if (text) {
-                el.innerHTML = text;
-            }
-        });
-        
-        const resumeEN = document.getElementById('resume-en');
-        const resumeES = document.getElementById('resume-es');
+    // Initial Render
+    render(currentLang);
+    updateLangButtons(currentLang);
 
-        if (lang === 'es') {
-            langES.classList.add('active');
-            langEN.classList.remove('active');
-            if(resumeES) resumeES.classList.remove('hidden');
-            if(resumeEN) resumeEN.classList.add('hidden');
-        } else {
-            langEN.classList.add('active');
-            langES.classList.remove('active');
-            if(resumeEN) resumeEN.classList.remove('hidden');
-            if(resumeES) resumeES.classList.add('hidden');
-        }
-    };
-
-    langEN.addEventListener('click', () => setLanguage('en'));
-    langES.addEventListener('click', () => setLanguage('es'));
-
-    // Set initial language
-    const savedLang = localStorage.getItem('language') || 'en';
-    setLanguage(savedLang);
-
-    // Modal functionality
-    const openModalButtons = document.querySelectorAll('[data-modal-target]');
-    const closeModalButtons = document.querySelectorAll('.close-btn');
-    const modals = document.querySelectorAll('.modal');
-
-    openModalButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const modal = document.querySelector(button.dataset.modalTarget);
-            openModal(modal);
-        });
-    });
-
-    closeModalButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const modal = button.closest('.modal');
-            closeModal(modal);
-        });
-    });
-
-    modals.forEach(modal => {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal(modal);
+    // Event Listeners
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.dataset.lang;
+            if (lang !== currentLang) {
+                currentLang = lang;
+                localStorage.setItem('cv_lang', lang);
+                render(currentLang);
+                updateLangButtons(currentLang);
             }
         });
     });
 
-    function openModal(modal) {
-        if (modal == null) return;
-        modal.classList.add('active');
+    function updateLangButtons(lang) {
+        langBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
     }
 
-    function closeModal(modal) {
-        if (modal == null) return;
-        modal.classList.remove('active');
+    function render(lang) {
+        const d = data[lang];
+        
+        // --- Sidebar Render ---
+        let sidebarHTML = `
+            <div class="profile-section">
+                <!-- Placeholder for Image - in a real scenario this would be a URL -->
+                <img src="https://ui-avatars.com/api/?name=Gabriel+Serra&background=1d1d1f&color=fff&size=200" alt="${d.profile.name}" class="profile-photo">
+                <h1 class="profile-name">${d.profile.name}</h1>
+                <div class="profile-title">${d.profile.title}</div>
+                <div class="profile-tagline">${d.profile.tagline}</div>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span> <a href="mailto:${d.profile.contact.email}">${d.profile.contact.email}</a>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span> <span>${d.profile.contact.phone}</span>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span> <span>${d.profile.contact.location}</span>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <h3 class="section-title">Skills</h3>
+                <ul class="skills-list">
+                    ${Object.entries(d.skills).map(([category, skills]) => `
+                        <li class="skill-category">
+                            <div class="skill-category-title">${category}</div>
+                            <div class="skill-tags">
+                                ${skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                            </div>
+                        </li>
+                    `).join('')}
+                </ul>
+            </div>
+        `;
+        sidebarEl.innerHTML = sidebarHTML;
+
+
+        // --- Main Content Render (Accordion Style) ---
+        // Helper to create accordion item
+        const createAccordionItem = (id, title, contentHTML, isOpen = false) => `
+            <div class="accordion-item ${isOpen ? 'open' : ''}" id="${id}">
+                <button class="accordion-header" aria-expanded="${isOpen}" aria-controls="${id}-content">
+                    <span class="accordion-title">${title}</span>
+                    <span class="accordion-icon">▼</span>
+                </button>
+                <div class="accordion-content" id="${id}-content" style="${isOpen ? 'display: block;' : 'display: none;'}">
+                    <div class="accordion-body">
+                        ${contentHTML}
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // 1. Professional Profile
+        const aboutHTML = `
+            <p>${d.about.description}</p>
+        `;
+
+        // 2. Experience
+        const experienceHTML = d.experience.map(job => `
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="role-title">${job.role}</div>
+                    <div class="period">${job.period}</div>
+                </div>
+                <div class="company-name">${job.company}</div>
+                <div class="description-text">
+                    <ul style="padding-left: 20px; margin-top: 10px;">
+                        ${job.responsibilities.map(res => `<li>${res}</li>`).join('')}
+                    </ul>
+                </div>
+            </div>
+        `).join('');
+
+        // 3. Projects
+        const projectsHTML = d.projects.map(proj => `
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-name">${proj.name}</div>
+                    <div class="tech-stack">${proj.tech.join(' • ')}</div>
+                </div>
+                <div class="company-name">${proj.summary}</div>
+                <div class="description-text">${proj.description}</div>
+            </div>
+        `).join('');
+
+        // 4. Education
+        const educationHTML = d.education.map(edu => `
+            <div class="education-item">
+                <div class="education-header">
+                    <div class="institution">${edu.institution}</div>
+                    <div class="period">${edu.period}</div>
+                </div>
+                <div class="degree">${edu.degree}</div>
+                ${edu.achievements ? `<div class="description-text">${edu.achievements}</div>` : ''}
+            </div>
+        `).join('');
+
+         // 5. Certifications & Courses
+         const certsHTML = `
+            <div class="certs-container">
+                <div class="certs-group">
+                    <h4>${d.certifications.title}</h4>
+                    ${d.certifications.list.map(grp => `
+                        <div class="cert-provider">
+                            <strong>${grp.name}</strong>
+                            <ul>
+                                ${grp.items.map(i => `<li>${i}</li>`).join('')}
+                            </ul>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="certs-group" style="margin-top: 20px;">
+                     <h4>${d.courses.title}</h4>
+                    ${d.courses.list.map(grp => `
+                        <div class="cert-provider">
+                            <strong>${grp.name}</strong>
+                            <ul>
+                                ${grp.items.map(i => `<li>${i}</li>`).join('')}
+                            </ul>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+         `;
+
+        // Combine all into the container
+        contentEl.innerHTML = `
+            ${createAccordionItem('section-about', d.about.title, aboutHTML, true)}
+            ${createAccordionItem('section-exp', lang === 'en' ? 'Experience' : 'Experiencia', experienceHTML, false)}
+            ${createAccordionItem('section-proj', lang === 'en' ? 'Projects' : 'Proyectos', projectsHTML, false)}
+            ${createAccordionItem('section-edu', lang === 'en' ? 'Education' : 'Educación', educationHTML, false)}
+            ${createAccordionItem('section-certs', lang === 'en' ? 'Certifications & Courses' : 'Certificaciones y Cursos', certsHTML, false)}
+        `;
+
+        // Re-attach listeners for the new accordion items
+        attachAccordionListeners();
+    }
+
+    function attachAccordionListeners() {
+        const headers = document.querySelectorAll('.accordion-header');
+        headers.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const content = item.querySelector('.accordion-content');
+                const isOpen = item.classList.contains('open');
+
+                // Toggle current
+                if (isOpen) {
+                    item.classList.remove('open');
+                    content.style.display = 'none';
+                    header.setAttribute('aria-expanded', 'false');
+                } else {
+                    item.classList.add('open');
+                    content.style.display = 'block';
+                    header.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
     }
 });
