@@ -39,7 +39,7 @@ window.cvData = {
                     "<strong>Performance Optimisation:</strong> Refactored legacy systems (PHP/MySQL), achieving a 40% improvement in large-scale database query performance through indexing and query optimisation.",
                     "<strong>Cloud Migration:</strong> Designed and implemented cloud architecture on AWS for delivery applications, integrating backend and native mobile apps, resulting in a 15% increase in customer retention."
                 ]
-            },
+            }
         ],
         "education": [
             {
@@ -245,7 +245,7 @@ window.cvData = {
                     "<strong>Optimización de Rendimiento:</strong> Refactorización de sistemas legacy (PHP/MySQL), logrando una mejora del 40% en el rendimiento de consultas a bases de datos de gran escala mediante indexación y optimización de queries.",
                     "<strong>Cloud Migration:</strong> Diseño e implementación de arquitectura cloud en AWS para aplicaciones de delivery, integrando backend y aplicaciones móviles nativas, lo que resultó en un aumento del 15% en retención de clientes."
                 ]
-            },
+            }
         ],
         "education": [
             {

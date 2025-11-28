@@ -42,3 +42,20 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Language Specific
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+venv/
+.venv/
+
+# Go
+*.exe
+*.bin
+*.o
+bin/
+pkg/
