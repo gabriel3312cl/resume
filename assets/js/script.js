@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let sidebarHTML = `
             <div class="profile-section">
                 <!-- Placeholder for Image - in a real scenario this would be a URL -->
-                <img src="https://ui-avatars.com/api/?name=Gabriel+Serra&background=1d1d1f&color=fff&size=200" alt="${d.profile.name}" class="profile-photo">
+                <img src="assets/images/profile-photo.jpeg" alt="${d.profile.name}" class="profile-photo">
                 <h1 class="profile-name">${d.profile.name}</h1>
                 <div class="profile-title">${d.profile.title}</div>
                 <div class="profile-tagline">${d.profile.tagline}</div>
