@@ -1,20 +1,13 @@
 name: Desplegar sitio estático en GitHub Pages
 
 on:
-  # Se ejecuta cada vez que haces un cambio (push) a la rama 'main'
   push:
     branches: ["main"]
-
-  # Te permite ejecutarlo manualmente desde la pestaña 'Actions' si es necesario
   workflow_dispatch:
-
-# Permisos para que GITHUB_TOKEN pueda desplegar en Pages
 permissions:
   contents: read
   pages: write
   id-token: write
-
-# Permite una sola implementación concurrente (cancela las anteriores si hay nuevas)
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -35,7 +28,6 @@ jobs:
       - name: Subir artefacto (Tus archivos HTML, CSS, JS)
         uses: actions/upload-pages-artifact@v3
         with:
-          # El '.' significa que subirá todo lo que esté en la raíz del repositorio
           path: '.'
 
       - name: Desplegar a GitHub Pages

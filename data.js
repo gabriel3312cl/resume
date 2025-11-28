@@ -5,7 +5,8 @@ window.cvData = {
     "en": {
         "profile": {
             "name": "Gabriel Serra",
-            "title": "Full Stack Developer & DevOps Engineer",
+            "title": "Senior Solutions Architect | IT/OT & Cloud Specialist | Tech Lead",
+            "tagline": "Building and deploying high-quality software and infrastructure.",
             "contact": {
                 "email": "gabrielserraquiroga@gmail.com",
                 "linkedin": "https://www.linkedin.com/in/gabriel-serra-a4abab348/",
@@ -14,14 +15,14 @@ window.cvData = {
             }
         },
         "about": {
-            "title": "Professional Profile",
-            "description": "DevOps Engineer and Software Developer with experience in strategic leadership, cloud architecture (GCP, Azure, AWS), and the complete Full Stack development CI/CD. I possess comprehensive expertise in defining robust cloud architectures, achieving cost reductions of up to 35%. Expert in platform engineering, leading the implementation of CI/CD cycles (Azure DevOps, GitHub Actions) that reduced deployment time by 90%. Solid experience in Infrastructure as Code (IaC) with Terraform, and container orchestration (GKE, AKS, Docker). In development, I master Back End technologies (Node.js, Python/FastAPI) and Front End technologies (React, Next.js, TypeScript), having created enterprise solutions (BPM) that optimised API load by 85% and improved operational capacity by 80%. I also have experience in optimising legacy systems (PHP) and large-scale databases (MySQL, PostgreSQL, MongoDB). I have led project and team management with Scrum (Jira), improving efficiency by 30%. I actively promote effective collaboration and transparent communication in multidisciplinary teams. Highlighted skills in technical leadership, mentoring engineers, and fostering inclusive and diverse work environments, valuing different perspectives to achieve common goals. I practice data-driven problem-solving (STAR method) and financial technology management, including negotiation with key suppliers. I seek to integrate into a team where I can add value through innovative solutions and contribute to a culture of continuous improvement, adaptability, and collaborative work."
+            "title": "Professional Summary",
+            "description": "Solutions Architect and Technical Lead with over 10 years of experience bridging Industrial Operations (OT) with Digital Ecosystems (IT). Specialist in designing resilient, decoupled Full Stack architectures, combining high-performance backends in Node.js with modern interfaces in React/Next.js and native mobile applications (Kotlin/Swift). Expert in infrastructure modernisation, leading the transition from monolithic processes to automated CI/CD (Azure DevOps) workflows and containerised environments (Docker). Led engineering teams promoting a collaborative environment (Psychological Safety), achieving 35% operational cost reductions and accelerating deployment times by 90%. Focused on Offline-First systems, IoT integration (Modbus/Serial), and resource optimisation for mission-critical operations."
         },
         "experience": [
             {
                 "company": "CITEC",
-                "period": "08/2021–09/2025",
-                "role": "Software Engineer / DevOps Engineer (Remote)",
+                "period": "2021–2025",
+                "role": "Senior Solutions Architect & Tech Lead (Remote)",
                 "responsibilities": [
                     "<strong>Strategic Leadership and Cloud Architecture Definition (GCP and Azure):</strong> Designed and implemented robust and scalable cloud architectures, managing instance configuration, optimising networks, and applying security policies. Established standards for technology stacks and enterprise-level design patterns, achieving a 35% reduction in hosting costs through re-engineering and an automated billing system. Actively participated in the evaluation and selection of technological solutions, performing cost estimations, ROI, and IRR calculations.",
                     "<strong>Platform Engineering and Automation (CI/CD and DevOps):</strong> Led the implementation of CI/CD cycles in Azure DevOps, reducing software deployment time by 90%. Managed production, development, testing, and stage environments, with Blue/Green and Canary deployments, service tuning, and automated builds. Automated publications on Google Play with GitHub Actions, generating significant time savings. Contributed to the creation of an internal platform (IDP) and the management of the \"Golden Path\" to standardise deployments.",
@@ -232,8 +233,8 @@ window.cvData = {
     },
     "es": {
         "profile": {
-            "name": "Gabriel Serra Quiroga",
-            "title": "Full Stack Developer & DevOps Engineer",
+            "name": "Gabriel Serra",
+            "title": "Senior Solutions Architect | IT/OT & Cloud Specialist | Tech Lead",
             "tagline": "Construyendo y desplegando software e infraestructura de alta calidad.",
             "contact": {
                 "email": "gabrielserraquiroga@gmail.com",

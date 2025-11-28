@@ -2,16 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = window.cvData;
     let currentLang = localStorage.getItem('cv_lang') || 'en';
 
-    // Elements
     const sidebarEl = document.querySelector('#sidebar .sidebar-sticky');
     const contentEl = document.getElementById('content');
     const langBtns = document.querySelectorAll('.lang-btn');
 
-    // Initial Render
     render(currentLang);
     updateLangButtons(currentLang);
 
-    // Event Listeners
     langBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const lang = btn.dataset.lang;
@@ -33,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function render(lang) {
         const d = data[lang];
         
-        // --- Sidebar Render ---
         let sidebarHTML = `
             <div class="profile-section">
                 <!-- Placeholder for Image - in a real scenario this would be a URL -->
@@ -74,9 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         sidebarEl.innerHTML = sidebarHTML;
 
-
-        // --- Main Content Render (Accordion Style) ---
-        // Helper to create accordion item
         const createAccordionItem = (id, title, contentHTML, isOpen = false) => `
             <div class="accordion-item ${isOpen ? 'open' : ''}" id="${id}">
                 <button class="accordion-header" aria-expanded="${isOpen}" aria-controls="${id}-content">
@@ -91,12 +84,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
 
-        // 1. Professional Profile
         const aboutHTML = `
             <p>${d.about.description}</p>
         `;
 
-        // 2. Experience
         const experienceHTML = d.experience.map(job => `
             <div class="experience-item">
                 <div class="experience-header">
@@ -112,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `).join('');
 
-        // 3. Projects
         const projectsHTML = d.projects.map(proj => `
             <div class="project-item">
                 <div class="project-header">
@@ -124,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `).join('');
 
-        // 4. Education
         const educationHTML = d.education.map(edu => `
             <div class="education-item">
                 <div class="education-header">
@@ -136,7 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `).join('');
 
-         // 5. Certifications & Courses
          const certsHTML = `
             <div class="certs-container">
                 <div class="certs-group">
@@ -164,7 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
          `;
 
-        // Combine all into the container
         contentEl.innerHTML = `
             ${createAccordionItem('section-about', d.about.title, aboutHTML, true)}
             ${createAccordionItem('section-exp', lang === 'en' ? 'Experience' : 'Experiencia', experienceHTML, false)}
@@ -173,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
             ${createAccordionItem('section-certs', lang === 'en' ? 'Certifications & Courses' : 'Certificaciones y Cursos', certsHTML, false)}
         `;
 
-        // Re-attach listeners for the new accordion items
         attachAccordionListeners();
     }
 
@@ -184,8 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const item = header.parentElement;
                 const content = item.querySelector('.accordion-content');
                 const isOpen = item.classList.contains('open');
-
-                // Toggle current
                 if (isOpen) {
                     item.classList.remove('open');
                     header.setAttribute('aria-expanded', 'false');
