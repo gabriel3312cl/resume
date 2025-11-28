@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebarEl = document.querySelector('#sidebar .sidebar-sticky');
     const contentEl = document.getElementById('content');
     const langBtns = document.querySelectorAll('.lang-btn');
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
     render(currentLang);
     updateLangButtons(currentLang);
@@ -20,6 +21,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    if(scrollToTopBtn) {
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        };
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    }
 
     function updateLangButtons(lang) {
         langBtns.forEach(btn => {
@@ -70,9 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         sidebarEl.innerHTML = sidebarHTML;
 
-        const createAccordionItem = (id, title, contentHTML, isOpen = false) => `
+        const createAccordionItem = (id, title, icon, contentHTML, isOpen = false) => `
             <div class="accordion-item ${isOpen ? 'open' : ''}" id="${id}">
                 <button class="accordion-header" aria-expanded="${isOpen}" aria-controls="${id}-content">
+                    <span class="material-symbols-outlined">${icon}</span>
                     <span class="accordion-title">${title}</span>
                     <span class="accordion-icon">▲</span>
                 </button>
@@ -153,11 +169,11 @@ document.addEventListener('DOMContentLoaded', () => {
          `;
 
         contentEl.innerHTML = `
-            ${createAccordionItem('section-about', d.about.title, aboutHTML, true)}
-            ${createAccordionItem('section-exp', lang === 'en' ? 'Experience' : 'Experiencia', experienceHTML, false)}
-            ${createAccordionItem('section-proj', lang === 'en' ? 'Projects' : 'Proyectos', projectsHTML, false)}
-            ${createAccordionItem('section-edu', lang === 'en' ? 'Education' : 'Educación', educationHTML, false)}
-            ${createAccordionItem('section-certs', lang === 'en' ? 'Certifications & Courses' : 'Certificaciones y Cursos', certsHTML, false)}
+            ${createAccordionItem('section-about', d.about.title, 'person', aboutHTML, true)}
+            ${createAccordionItem('section-exp', lang === 'en' ? 'Experience' : 'Experiencia', 'work', experienceHTML, false)}
+            ${createAccordionItem('section-proj', lang === 'en' ? 'Projects' : 'Proyectos', 'code_blocks', projectsHTML, false)}
+            ${createAccordionItem('section-edu', lang === 'en' ? 'Education' : 'Educación', 'school', educationHTML, false)}
+            ${createAccordionItem('section-certs', lang === 'en' ? 'Certifications & Courses' : 'Certificaciones y Cursos', 'workspace_premium', certsHTML, false)}
         `;
 
         attachAccordionListeners();
