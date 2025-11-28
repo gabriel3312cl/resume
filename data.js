@@ -24,45 +24,21 @@ window.cvData = {
                 "period": "2021–2025",
                 "role": "Senior Solutions Architect & Tech Lead (Remote)",
                 "responsibilities": [
-                    "<strong>Strategic Leadership and Cloud Architecture Definition (GCP and Azure):</strong> Designed and implemented robust and scalable cloud architectures, managing instance configuration, optimising networks, and applying security policies. Established standards for technology stacks and enterprise-level design patterns, achieving a 35% reduction in hosting costs through re-engineering and an automated billing system. Actively participated in the evaluation and selection of technological solutions, performing cost estimations, ROI, and IRR calculations.",
-                    "<strong>Platform Engineering and Automation (CI/CD and DevOps):</strong> Led the implementation of CI/CD cycles in Azure DevOps, reducing software deployment time by 90%. Managed production, development, testing, and stage environments, with Blue/Green and Canary deployments, service tuning, and automated builds. Automated publications on Google Play with GitHub Actions, generating significant time savings. Contributed to the creation of an internal platform (IDP) and the management of the \"Golden Path\" to standardise deployments.",
-                    "<strong>Development of Enterprise Solutions and Performance Optimisation:</strong> Developed and deployed MoniPro (monipro.cl), a task management system (BPM) with centralised cache (Zustand), reducing API load by 85% and improving user KPIs by 20%. Led the implementation of a scalable queue management system (Azure, Node.js/Python FastAPI, Next.js/React, Kotlin), improving operational capacity by 80% and customer experience by 70%.",
-                    "<strong>Project and Engineering Team Management (Scrum and Atlassian Suite):</strong> Led the integration and configuration of Jira for project and task management using Scrum, which resulted in a 30% improvement in team efficiency and a 25% increase in progress visibility. Fostered the mentoring of other Senior Engineers and Technical Leaders, and participated in defining the \"Engineering Ladder\" for professional growth. Implemented data-driven problem and conflict resolution strategies based on project objectives, using the STAR method to analyse situations and propose effective solutions.",
-                    "<strong>Monitoring, Incident Management, and Security:</strong> Orchestrated active monitoring of cloud systems and traceability of incidents (corporate and cybersecurity). Designed the security strategy in the development lifecycle, ensuring system integrity.",
-                    "<strong>Financial Management and Strategic Negotiation in Technology:</strong> Responsible for the technology and cloud budget, leading large-scale negotiations with key suppliers (AWS, Azure, Atlassian, Google) to optimise costs at an enterprise level and ensure profitability. Performed financial analysis to ensure the alignment of technological solutions with business objectives."
+                    "Technical leadership of an engineering team (3 developers), defining architectural strategy and the 'Golden Path' for software development. Responsible for designing critical solutions integrating industrial hardware with the cloud.",
+                    "<strong>Financial Impact (FinOps):</strong> Achieved a 35% reduction in cloud infrastructure costs through service re-engineering and resource optimisation in Azure.",
+                    "<strong>Operational Excellence (DevOps):</strong> Implemented CI/CD pipelines in Azure DevOps, reducing deployment time by 90% and eliminating production incidents through immutable artefact strategies."
                 ]
             },
             {
                 "company": "Freelance",
-                "period": "06/2019–02/2021",
-                "role": "Software and Cloud Systems Consultant (Remote / On-site)",
+                "period": "2014–2021",
+                "role": "Cloud Consultant & Software Engineer",
                 "responsibilities": [
-                    "<strong>Legacy Systems Optimisation and Operational Efficiency:</strong> Led the optimisation of a service management system (PHP legacy) for telecommunications companies in Peru and Chile. Implemented improvements that resulted in superior operational traceability, a 25% increase in staff efficiency, and a 30% reduction in incident resolution time.",
-                    "<strong>Performance Improvement in Large-Scale Databases:</strong> Designed and implemented SQL query optimisation strategies (MySQL, PostgreSQL) to handle large volumes of data in the telecommunications sector, achieving a 40% improvement in performance and a reduction in response times.",
-                    "<strong>Design and Implementation of Native and Hybrid Cloud Architectures:</strong> Led the design and implementation of a cloud architecture on AWS for a delivery system. The project, which included a PHP backend, Bootstrap frontend, and native mobile applications (Android - Kotlin, iOS - Swift), improved customer service time by 20%, increased customer retention by 15%, and ensured 95% accuracy in geographical availability for deliveries."
+                    "Consultancy specialising in legacy system optimisation and cloud migration for the telecommunications sector.",
+                    "<strong>Performance Optimisation:</strong> Refactored legacy systems (PHP/MySQL), achieving a 40% improvement in large-scale database query performance through indexing and query optimisation.",
+                    "<strong>Cloud Migration:</strong> Designed and implemented cloud architecture on AWS for delivery applications, integrating backend and native mobile apps, resulting in a 15% increase in customer retention."
                 ]
             },
-            {
-                "company": "Geopixel",
-                "period": "09/2014–06/2019",
-                "role": "Full Stack Developer (Remote / On-site)",
-                "responsibilities": [
-                    "<strong>Website and Application Development:</strong> Creation of web solutions and applications using PHP and Bootstrap, with a focus on search engine optimisation (SEO) through keyword strategies to improve visibility on Google.",
-                    "<strong>Web Data Analysis:</strong> Implementation and management of Google Analytics for user tracking and performance metrics on various enterprise platforms.",
-                    "<strong>Linux Server Management:</strong> Administration of Ubuntu environments for the implementation and maintenance of multimedia captive portals, covering service configuration, security, and optimisation.",
-                    "<strong>Frontend and Backend Development:</strong> Use of JavaScript for frontend development and PHP in the backend, with MySQL databases for content and user management.",
-                    "<strong>Automation and Network Configuration:</strong> Creation of Bash scripts for task automation and advanced network configuration, including DNS, DHCP, VLANs, and firewalling management.",
-                    "<strong>Hardware and Network Optimisation:</strong> Tuning of servers and network equipment, with configuration and management of Ubiquiti devices to ensure optimal performance and robust connectivity."
-                ]
-            },
-            {
-                "company": "Extralim",
-                "period": "08/2012 – 06/2014",
-                "role": "Web and Software Developer",
-                "responsibilities": [
-                    "<strong>E-commerce Framework Implementation:</strong> Implementation of self-managed digital commerce platforms such as PrestaShop and Magento, including configuration, customisation, and development of additional modules."
-                ]
-            }
         ],
         "education": [
             {
@@ -245,53 +221,29 @@ window.cvData = {
         },
         "about": {
             "title": "Perfil Profesional",
-            "description": "Ingeniero DevOps y Desarrollador de Software con experiencia en liderazgo estratégico, arquitectura cloud (GCP, Azure, AWS) y el ciclo completo de desarrollo CI/CD. Poseo un dominio integral en la definición de arquitecturas cloud robustas, logrando reducciones de costos de hasta un 35%. Experto en ingeniería de plataforma, liderando la implementación de ciclos CI/CD (Azure DevOps, GitHub Actions) que redujeron el tiempo de despliegue en un 90%. Sólida experiencia en Infraestructura como Código (IaC) con Terraform, orquestación de contenedores (GKE, AKS, Docker). En desarrollo, domino tecnologías Back End (Node.js, Python/FastAPI) y Front End (React, Next.js, TypeScript), habiendo creado soluciones empresariales (BPM) que optimizaron la carga de API en un 85% y mejoraron la capacidad operativa en un 80%. Cuento también con experiencia en la optimización de sistemas legacy (PHP) y bases de datos a gran escala (MySQL, PostgreSQL, MongoDB). He liderado la gestión de proyectos y equipos con Scrum (Jira), mejorando la eficiencia en un 30%. Promuevo activamente la colaboración efectiva y la comunicación transparente en equipos multidisciplinarios. Habilidades destacadas en liderazgo técnico, mentoría de ingenieros y el fomento de entornos de trabajo inclusivos y diversos, valorando diferentes perspectivas para alcanzar objetivos comunes. Practico la resolución de problemas basada en datos (método STAR) y la gestión financiera de tecnología, incluyendo la negociación con proveedores clave. Busco integrarme en un equipo donde pueda aportar valor a través de soluciones innovadoras y contribuir a una cultura de mejora continua, adaptabilidad y trabajo colaborativo."
+            "description": "Arquitecto de Soluciones y Líder Técnico con más de 10 años de experiencia unificando operaciones industriales (OT) con ecosistemas digitales (IT). Especialista en diseñar arquitecturas Full Stack desacopladas y resilientes, combinando backends de alto rendimiento en Node.js con interfaces modernas en React/Next.js y aplicaciones nativas móviles (Kotlin/Swift). Experto en modernización de infraestructura, liderando la transición de procesos monolíticos a flujos automatizados de CI/CD (Azure DevOps) y entornos contenerizados (Docker). He liderado equipos de ingeniería promoviendo un entorno colaborativo (Psychological Safety), logrando reducciones de costos operativos del 35% y acelerando los tiempos de despliegue en un 90%. Mi enfoque se centra en sistemas Offline-First, integración IoT (Modbus/Serial) y optimización de recursos para operaciones de misión crítica."
         },
         "experience": [
             {
                 "company": "CITEC",
-                "period": "08/2021–09/2025",
-                "role": "Desarrollador de Software / DevOps Engineer (Remoto)",
+                "period": "2021–2025",
+                "role": "Senior Solutions Architect & Tech Lead (Remote)",
                 "responsibilities": [
-                    "<strong>Liderazgo Estratégico y Definición de Arquitectura Cloud (GCP y Azure):</strong> Diseñé e implementé arquitecturas cloud robustas y escalables, gestionando la configuración de instancias, optimizando redes y aplicando políticas de seguridad. Establecí estándares para stacks tecnológicos y patrones de diseño a nivel empresarial, logrando una reducción del 35% en costos de hosting mediante reingeniería y un sistema automatizado de billing. Participé activamente en la evaluación y selección de soluciones tecnológicas, realizando estimaciones de costos, cálculo de ROI y TIR.",
-                    "<strong>Ingeniería de Plataforma y Automatización (CI/CD y DevOps):</strong> Lideré la implementación de ciclos CI/CD en Azure DevOps, reduciendo el tiempo de despliegue de software en un 90%. Gestioné entornos de producción, desarrollo, testing y stage, con despliegues Blue/Green y Canary, tuning de servicios y automatización de builds. Automatizé publicaciones en Google Play con GitHub Actions, generando un ahorro considerable de tiempo. Contribuí a la creación de una plataforma interna (IDP) y la gestión del \"Golden Path\" para estandarizar despliegues.",
-                    "<strong>Desarrollo de Soluciones Empresariales y Optimización de Rendimiento:</strong> Desarrollé y desplegué MoniPro (monipro.cl), un sistema de gestión de tareas (BPM) con caché centralizado (Zustand), reduciendo la carga de la API en un 85% y mejorando KPIs de usuarios en un 20%. Lideré la implementación de un sistema de gestión de filas escalable (Azure, Node.js/Python FastAPI, Next.js/React, Kotlin), mejorando la capacidad operativa en un 80% y la experiencia del cliente en un 70%.",
-                    "<strong>Gestión de Proyectos y Equipos de Ingeniería (Scrum y Atlassian Suite):</strong> Lideré la integración y configuración de Jira para la gestión de proyectos y tareas aplicando Scrum, lo que resultó en una mejora del 30% en la eficiencia del equipo y un aumento del 25% en la visibilidad del progreso. Fomenté la mentoría de otros Ingenieros Senior y Líderes Técnicos, y participé en la definición de la \"Engineering Ladder\" para el crecimiento profesional. Implementé estrategias de resolución de problemas y conflictos basadas en datos y objetivos de proyectos, utilizando el método STAR para analizar situaciones y proponer soluciones efectivas.",
-                    "<strong>Monitoreo, Gestión de Incidencias y Seguridad:</strong> Orquesté el monitoreo activo de sistemas cloud y la trazabilidad de incidencias (corporativas y de ciberseguridad). Diseñé la estrategia de seguridad en el ciclo de vida del desarrollo, garantizando la integridad de los sistemas.",
-                    "<strong>Gestión Financiera y Negociación Estratégica en Tecnología:</strong> Responsable del presupuesto de tecnología y cloud, liderando negociaciones a gran escala con proveedores clave (AWS, Azure, Atlassian, Google) para optimizar costos a nivel empresarial y asegurar la rentabilidad. Realicé análisis financiero para asegurar la alineación de las soluciones tecnológicas con los objetivos de negocio."
+                    "Liderazgo técnico de un equipo de ingeniería (3 desarrolladores), definiendo la estrategia de arquitectura y el 'Golden Path' para el desarrollo de software. Responsable del diseño de soluciones críticas que integran hardware industrial con la nube.",
+                    "<strong>Impacto Financiero (FinOps):</strong> Reducción del 35% en costos de infraestructura cloud mediante la reingeniería de servicios y optimización de recursos en Azure.",
+                    "<strong>Excelencia Operacional (DevOps):</strong> Implementación de pipelines de CI/CD en Azure DevOps, reduciendo el tiempo de despliegue en un 90% y eliminando incidentes en producción mediante estrategias de artefactos inmutables."
                 ]
             },
             {
-                "company": "Independiente",
-                "period": "06/2019–02/2021",
-                "role": "Consultor de Software y Sistemas Cloud (Remoto / Presencial)",
+                "company": "Freelance",
+                "period": "2014–2021",
+                "role": "Cloud Consultant & Software Engineer",
                 "responsibilities": [
-                    "<strong>Optimización de Sistemas Legacy y Eficiencia Operacional:</strong> Lideré la optimización de un sistema de gestión de servicios (PHP legacy) para empresas de telecomunicaciones en Perú y Chile. Implementé mejoras que resultaron en una trazabilidad superior de operaciones, un aumento del 25% en la eficiencia del personal y una reducción del 30% en el tiempo de atención de incidentes.",
-                    "<strong>Mejora de Rendimiento en Bases de Datos a Gran Escala:</strong> Diseñé e implementé estrategias de optimización de consultas SQL (MySQL, PostgreSQL) para manejar grandes volúmenes de datos en el sector de telecomunicaciones, logrando una mejora del 40% en el rendimiento y una reducción en los tiempos de respuesta.",
-                    "<strong>Diseño e Implementación de Arquitecturas Cloud Nativas y Híbridas:</strong> Lideré el diseño y la implementación de una arquitectura cloud en AWS para un sistema de delivery. El proyecto, que incluyó backend en PHP, frontend en Bootstrap y aplicaciones móviles nativas (Android - Kotlin, iOS - Swift), mejoró el tiempo de atención al cliente en un 20%, aumentó la retención de clientes en un 15% y garantizó una precisión del 95% en la disponibilidad geográfica para las entregas."
+                    "Consultoría especializada en optimización de sistemas legados y migración a la nube para el sector de telecomunicaciones.",
+                    "<strong>Optimización de Rendimiento:</strong> Refactorización de sistemas legacy (PHP/MySQL), logrando una mejora del 40% en el rendimiento de consultas a bases de datos de gran escala mediante indexación y optimización de queries.",
+                    "<strong>Cloud Migration:</strong> Diseño e implementación de arquitectura cloud en AWS para aplicaciones de delivery, integrando backend y aplicaciones móviles nativas, lo que resultó en un aumento del 15% en retención de clientes."
                 ]
             },
-            {
-                "company": "Geopixel",
-                "period": "09/2014–06/2019",
-                "role": "Desarrollador Full Stack (Remoto / Presencial)",
-                "responsibilities": [
-                    "<strong>Desarrollo de Sitios Web y Aplicaciones:</strong> Creación de soluciones web y aplicaciones utilizando PHP y Bootstrap, con un enfoque en la optimización para motores de búsqueda (SEO) a través de estrategias de palabras clave para mejorar la visibilidad en Google.",
-                    "<strong>Análisis de Datos Web:</strong> Implementación y gestión de Google Analytics para el seguimiento de usuarios y métricas de rendimiento en diversas plataformas empresariales.",
-                    "<strong>Gestión de Servidores Linux:</strong> Administración de entornos Ubuntu para la implementación y mantenimiento de portales cautivos multimedia, abarcando configuración de servicios, seguridad y optimización.",
-                    "<strong>Desarrollo Frontend y Backend:</strong> Utilización de JavaScript para el desarrollo frontend y PHP en el backend, con bases de datos MySQL para la gestión de contenido y usuarios.",
-                    "<strong>Automatización y Configuración de Redes:</strong> Creación de scripts Bash para la automatización de tareas y configuración avanzada de redes, incluyendo gestión de DNS, DHCP, VLANs y firewalling.",
-                    "<strong>Optimización de Hardware y Redes:</strong> Tuning de servidores y equipos de red, con configuración y gestión de dispositivos Ubiquiti para asegurar un rendimiento óptimo y una conectividad robusta."
-                ]
-            },
-            {
-                "company": "Extralim",
-                "period": "08/2012 – 06/2014",
-                "role": "Desarrollador Web y de Software",
-                "responsibilities": [
-                    "<strong>Implementación de Frameworks de E-commerce:</strong> Implementación de plataformas de comercio digital de autogestión como PrestaShop y Magento, incluyendo configuración, personalización y desarrollo de módulos adicionales."
-                ]
-            }
         ],
         "education": [
             {
