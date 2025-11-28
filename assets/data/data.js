@@ -11,6 +11,7 @@ window.cvData = {
                 "email": "gabrielserraquiroga@gmail.com",
                 "linkedin": "https://www.linkedin.com/in/gabriel-serra-a4abab348/",
                 "github": "https://github.com/gabriel3312cl",
+                "youtube": "https://www.youtube.com/@gabrielserra5644",
                 "location": "Chile"
             }
         },
@@ -216,6 +217,7 @@ window.cvData = {
                 "email": "gabrielserraquiroga@gmail.com",
                 "linkedin": "https://www.linkedin.com/in/gabriel-serra-a4abab348/",
                 "github": "https://github.com/gabriel3312cl",
+                "youtube": "https://www.youtube.com/@gabrielserra5644",
                 "location": "Chile"
             }
         },
