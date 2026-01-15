@@ -2,7 +2,7 @@
 
 # Gabriel Serra
 
-## Senior Solutions Architect | IT/OT & Cloud Specialist | Tech Lead
+## Solutions Architect
 
 _Building and deploying high-quality software and infrastructure._ 
 
@@ -10,26 +10,17 @@ _Building and deploying high-quality software and infrastructure._
 
 ## Professional Summary
 
-Solutions Architect and Technical Lead with over 10 years of experience bridging Industrial Operations (OT) with Digital Ecosystems (IT). Specialist in designing resilient, decoupled Full Stack architectures, combining high-performance backends in Node.js with modern interfaces in React/Next.js and native mobile applications (Kotlin/Swift). Expert in infrastructure modernisation, leading the transition from monolithic processes to automated CI/CD (Azure DevOps) workflows and containerised environments (Docker). Led engineering teams promoting a collaborative environment (Psychological Safety), achieving 35% operational cost reductions and accelerating deployment times by 90%. Focused on Offline-First systems, IoT integration (Modbus/Serial), and resource optimisation for mission-critical operations.
+Solutions Architect with over 10 years in OT/IT convergence. Expert in decoupled and resilient Full Stack architectures (Node.js, Rust, Go, Python, React, Kotlin), ensuring interoperability and scalability without technical debt. I lead infrastructure modernization, CI/CD automation, and observability and quality standards for rapid deployments. Specialist in horizontal management and complex problem resolution, aligning business objectives with technical execution. I foster technical excellence, optimizing costs and elevating the performance of critical distributed systems.
 
 ## Experience
 
-### Senior Solutions Architect & Tech Lead (Remote) at CITEC
+### Senior Solutions Architect at CITEC
 
 *2021–2025*
 
-- Technical leadership of an engineering team (3 developers), defining architectural strategy and the 'Golden Path' for software development. Responsible for designing critical solutions integrating industrial hardware with the cloud.
-- **Financial Impact (FinOps):** Achieved a 35% reduction in cloud infrastructure costs through service re-engineering and resource optimisation in Azure.
-- **Operational Excellence (DevOps):** Implemented CI/CD pipelines in Azure DevOps, reducing deployment time by 90% and eliminating production incidents through immutable artefact strategies.
-
-### Cloud Consultant & Software Engineer at Freelance
-
-*2014–2021*
-
-- Consultancy specialising in legacy system optimisation and cloud migration for the telecommunications sector.
-- **Performance Optimisation:** Refactored legacy systems (PHP/MySQL), achieving a 40% improvement in large-scale database query performance through indexing and query optimisation.
-- **Cloud Migration:** Designed and implemented cloud architecture on AWS for delivery applications, integrating backend and native mobile apps, resulting in a 15% increase in customer retention.
-
+- Led incident resolution and technical debt mitigation, coordinating multi-team responses to ensure operational continuity. Diagnosed performance limitations in distributed systems and transformed ambiguous requirements into deterministic technical specifications.
+- Institutionalised reliability standards by implementing advanced observability, defining alerts based on SLAs/SLOs and distributed tracing. Optimised CI/CD pipelines to achieve fast and reversible deployments, establishing rigorous quality governance through staged testing strategies and code coverage.
+- Exercised technical leadership through influence, aligning multiple engineering teams toward common solutions and elevating the level of Senior engineers through mentorship and design reviews.
 
 ## Projects
 
@@ -199,14 +190,14 @@ Mid-Level POS application. MVVM architecture with reactive LiveData. Handles rea
 
 ## Education
 
-### Automation and Robotics Engineering
+### Bachelor in Robotics Engineering
 
 *Instituto Profesional INACAP (2021 – 2024)*
 
 - First academic place 2024.
 
 
-### Higher Level Technician in Analyst Programmer
+### Associate Degree in Computer Information Technology
 
 *Centro de Formación Técnica INACAP (2012 – 2014)*
 
