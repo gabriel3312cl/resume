@@ -1,5 +1,3 @@
-[Ver en español](README.es.md)
-
 # Gabriel Serra
 
 ## Solutions Architect
