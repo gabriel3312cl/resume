@@ -5,7 +5,7 @@ window.cvData = {
     "en": {
         "profile": {
             "name": "Gabriel Serra",
-            "title": "Senior Solutions Architect | IT/OT & Cloud Specialist | Tech Lead",
+            "title": "Solutions Architect",
             "tagline": "Building and deploying high-quality software and infrastructure.",
             "contact": {
                 "email": "gabrielserraquiroga@gmail.com",
@@ -17,40 +17,30 @@ window.cvData = {
         },
         "about": {
             "title": "Professional Summary",
-            "description": "Solutions Architect and Technical Lead with over 10 years of experience bridging Industrial Operations (OT) with Digital Ecosystems (IT). Specialist in designing resilient, decoupled Full Stack architectures, combining high-performance backends in Node.js with modern interfaces in React/Next.js and native mobile applications (Kotlin/Swift). Expert in infrastructure modernisation, leading the transition from monolithic processes to automated CI/CD (Azure DevOps) workflows and containerised environments (Docker). Led engineering teams promoting a collaborative environment (Psychological Safety), achieving 35% operational cost reductions and accelerating deployment times by 90%. Focused on Offline-First systems, IoT integration (Modbus/Serial), and resource optimisation for mission-critical operations."
+            "description": "Solutions Architect with over 10 years in OT/IT convergence. Expert in decoupled and resilient Full Stack architectures (Node.js, Rust, Go, Python, React, Kotlin), ensuring interoperability and scalability without technical debt. I lead infrastructure modernization, CI/CD automation, and observability and quality standards for rapid deployments. Specialist in horizontal management and complex problem resolution, aligning business objectives with technical execution. I foster technical excellence, optimizing costs and elevating the performance of critical distributed systems."
         },
         "experience": [
             {
                 "company": "CITEC",
                 "period": "2021–2025",
-                "role": "Senior Solutions Architect & Tech Lead (Remote)",
+                "role": "Solutions Architect",
                 "responsibilities": [
-                    "Technical leadership of an engineering team (3 developers), defining architectural strategy and the 'Golden Path' for software development. Responsible for designing critical solutions integrating industrial hardware with the cloud.",
-                    "<strong>Financial Impact (FinOps):</strong> Achieved a 35% reduction in cloud infrastructure costs through service re-engineering and resource optimisation in Azure.",
-                    "<strong>Operational Excellence (DevOps):</strong> Implemented CI/CD pipelines in Azure DevOps, reducing deployment time by 90% and eliminating production incidents through immutable artefact strategies."
-                ]
-            },
-            {
-                "company": "Freelance",
-                "period": "2014–2021",
-                "role": "Cloud Consultant & Software Engineer",
-                "responsibilities": [
-                    "Consultancy specialising in legacy system optimisation and cloud migration for the telecommunications sector.",
-                    "<strong>Performance Optimisation:</strong> Refactored legacy systems (PHP/MySQL), achieving a 40% improvement in large-scale database query performance through indexing and query optimisation.",
-                    "<strong>Cloud Migration:</strong> Designed and implemented cloud architecture on AWS for delivery applications, integrating backend and native mobile apps, resulting in a 15% increase in customer retention."
+                    "Led incident resolution and technical debt mitigation, coordinating multi-team responses to ensure operational continuity. Diagnosed performance limitations in distributed systems and transformed ambiguous requirements into deterministic technical specifications.",
+                    "Institutionalised reliability standards by implementing advanced observability, defining alerts based on SLAs/SLOs and distributed tracing. Optimised CI/CD pipelines to achieve fast and reversible deployments, establishing rigorous quality governance through staged testing strategies and code coverage.",
+                    "Exercised technical leadership through influence, aligning multiple engineering teams toward common solutions and elevating the level of Senior engineers through mentorship and design reviews."
                 ]
             }
         ],
         "education": [
             {
                 "institution": "Instituto Profesional INACAP",
-                "degree": "Automation and Robotics Engineering",
+                "degree": "Bachelor in Robotics Engineering",
                 "period": "2021 – 2024",
                 "achievements": "First academic place 2024."
             },
             {
                 "institution": "Centro de Formación Técnica INACAP",
-                "degree": "Higher Level Technician in Analyst Programmer",
+                "degree": "Associate Degree in Computer Information Technology",
                 "period": "2012 – 2014",
                 "achievements": ""
             }
@@ -211,7 +201,7 @@ window.cvData = {
     "es": {
         "profile": {
             "name": "Gabriel Serra",
-            "title": "Senior Solutions Architect | IT/OT & Cloud Specialist | Tech Lead",
+            "title": "Solutions Architect",
             "tagline": "Construyendo y desplegando software e infraestructura de alta calidad.",
             "contact": {
                 "email": "gabrielserraquiroga@gmail.com",
@@ -223,27 +213,17 @@ window.cvData = {
         },
         "about": {
             "title": "Perfil Profesional",
-            "description": "Arquitecto de Soluciones y Líder Técnico con más de 10 años de experiencia unificando operaciones industriales (OT) con ecosistemas digitales (IT). Especialista en diseñar arquitecturas Full Stack desacopladas y resilientes, combinando backends de alto rendimiento en Node.js con interfaces modernas en React/Next.js y aplicaciones nativas móviles (Kotlin/Swift). Experto en modernización de infraestructura, liderando la transición de procesos monolíticos a flujos automatizados de CI/CD (Azure DevOps) y entornos contenerizados (Docker). He liderado equipos de ingeniería promoviendo un entorno colaborativo (Psychological Safety), logrando reducciones de costos operativos del 35% y acelerando los tiempos de despliegue en un 90%. Mi enfoque se centra en sistemas Offline-First, integración IoT (Modbus/Serial) y optimización de recursos para operaciones de misión crítica."
+            "description": "Solutions Architect con más de 10 años en convergencia OT/TI. Experto en arquitecturas Full Stack desacopladas y resilientes (Node.js, Rust, Go, Python, React, Kotlin), garantizando interoperabilidad y escalabilidad sin deuda técnica. Lidero modernización de infraestructura, automatización CI/CD, y estándares de observabilidad y calidad para despliegues rápidos. Especialista en gestión horizontal y resolución de problemas complejos, alineando objetivos de negocio con ejecución técnica. Fomento la excelencia técnica, optimizando costos y elevando el rendimiento de sistemas distribuidos críticos."
         },
         "experience": [
             {
                 "company": "CITEC",
                 "period": "2021–2025",
-                "role": "Senior Solutions Architect & Tech Lead (Remote)",
+                "role": "Solutions Architect",
                 "responsibilities": [
-                    "Liderazgo técnico de un equipo de ingeniería (3 desarrolladores), definiendo la estrategia de arquitectura y el 'Golden Path' para el desarrollo de software. Responsable del diseño de soluciones críticas que integran hardware industrial con la nube.",
-                    "<strong>Impacto Financiero (FinOps):</strong> Reducción del 35% en costos de infraestructura cloud mediante la reingeniería de servicios y optimización de recursos en Azure.",
-                    "<strong>Excelencia Operacional (DevOps):</strong> Implementación de pipelines de CI/CD en Azure DevOps, reduciendo el tiempo de despliegue en un 90% y eliminando incidentes en producción mediante estrategias de artefactos inmutables."
-                ]
-            },
-            {
-                "company": "Freelance",
-                "period": "2014–2021",
-                "role": "Cloud Consultant & Software Engineer",
-                "responsibilities": [
-                    "Consultoría especializada en optimización de sistemas legados y migración a la nube para el sector de telecomunicaciones.",
-                    "<strong>Optimización de Rendimiento:</strong> Refactorización de sistemas legacy (PHP/MySQL), logrando una mejora del 40% en el rendimiento de consultas a bases de datos de gran escala mediante indexación y optimización de queries.",
-                    "<strong>Cloud Migration:</strong> Diseño e implementación de arquitectura cloud en AWS para aplicaciones de delivery, integrando backend y aplicaciones móviles nativas, lo que resultó en un aumento del 15% en retención de clientes."
+                    "Lideré la resolución de incidentes y la mitigación de deuda técnica, coordinando respuestas multiequipo para asegurar la continuidad operativa. Diagnostiqué limitaciones de rendimiento en sistemas distribuidos y transformé requisitos ambiguos en especificaciones técnicas deterministas.",
+                    "Institucionalicé estándares de fiabilidad mediante la implementación de observabilidad avanzada, definiendo alertas basadas en SLAs/SLOs y tracing distribuido. Optimicé los pipelines de CI/CD para lograr despliegues rápidos y reversibles, estableciendo una gobernanza de calidad rigurosa a través de estrategias de testing escalonado y cobertura de código.",
+                    "Ejercí liderazgo técnico mediante influencia, alineando a múltiples equipos de ingeniería hacia soluciones comunes y elevando el nivel de ingenieros Senior a través de mentoría y design reviews."
                 ]
             }
         ],
