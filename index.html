@@ -1,33 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel Serra - Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Gabriel Serra Quiroga | Staff Software Engineer</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    <div class="language-switcher">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="es">ES</button>
-    </div>
 
-    <div class="container">
-        <aside id="sidebar">
-            <div class="sidebar-sticky">
+    <header>
+        <div class="container nav-content">
+            <a href="#" class="logo">Gabriel Serra Quiroga</a>
+            <div class="lang-switch" onclick="toggleLanguage()">
+                <span class="lang-en">ES</span>
+                <span class="lang-es">EN</span>
             </div>
-        </aside>
-        <main id="content">
-            
-        </main>
-    </div>
+        </div>
+    </header>
 
-    <script src="assets/data/data.js"></script>
+    <section class="hero">
+        <div class="container">
+            <img src="assets/images/profile-photo.jpeg" alt="Gabriel Serra Quiroga" class="profile-photo">
+            <h1 class="lang-en">Staff Software Engineer<br>& Senior Solutions Architect</h1>
+            <h1 class="lang-es">Staff Software Engineer<br>& Arquitecto de Soluciones Senior</h1>
+
+            <h2 class="lang-en">Bridging the gap between Industrial Hardware (OT) and Cloud (IT) with AI-Native
+                Engineering.</h2>
+            <h2 class="lang-es">Uniendo el Hardware Industrial (OT) y la Nube (IT) con Ingeniería Nativa de IA.</h2>
+
+            <div class="hero-badges">
+                <span class="badge">Go & Rust</span>
+                <span class="badge">AI Agents</span>
+                <span class="badge">Azure IoT</span>
+                <span class="badge">Offline-First</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray">
+        <div class="container">
+            <h2 class="section-title lang-en">Technical Expertise</h2>
+            <h2 class="section-title lang-es">Expertise Técnico</h2>
+
+            <div class="grid grid-3">
+                <div class="skill-card">
+                    <h3 class="lang-en">AI-Augmented Engineering</h3>
+                    <h3 class="lang-es">Ingeniería Aumentada por IA</h3>
+                    <p class="lang-en">Leveraging autonomous agents to multiply productivity.</p>
+                    <p class="lang-es">Uso de agentes autónomos para multiplicar la productividad.</p>
+                    <div style="margin-top:15px">
+                        <span class="skill-tag">Antigravity</span>
+                        <span class="skill-tag">GitHub Copilot</span>
+                        <span class="skill-tag">Claude 3.5</span>
+                        <span class="skill-tag">Gemini</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3 class="lang-en">Core & Languages</h3>
+                    <h3 class="lang-es">Lenguajes & Core</h3>
+                    <p class="lang-en">High performance and memory safety focus.</p>
+                    <p class="lang-es">Enfoque en alto rendimiento y gestión de memoria.</p>
+                    <div style="margin-top:15px">
+                        <span class="skill-tag">Go (Golang)</span>
+                        <span class="skill-tag">Rust</span>
+                        <span class="skill-tag">Node.js (TS)</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3 class="lang-en">Cloud & DevOps</h3>
+                    <h3 class="lang-es">Cloud & DevOps</h3>
+                    <p class="lang-en">FinOps driven architecture on Azure.</p>
+                    <p class="lang-es">Arquitectura orientada a FinOps en Azure.</p>
+                    <div style="margin-top:15px">
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title lang-en">Featured Projects</h2>
+            <h2 class="section-title lang-es">Proyectos Destacados</h2>
+
+            <div class="grid grid-2">
+                <div class="card">
+                    <span class="project-tag">Industrial IoT</span>
+                    <div class="project-title">VOGT-MIC Ecosystem</div>
+                    <p class="project-desc lang-en">An Offline-First monitoring system for industrial sites.
+                        Synchronizes local Python Edge servers with Azure Cloud via WebSockets without data loss.</p>
+                    <p class="project-desc lang-es">Sistema de monitoreo Offline-First para entornos industriales.
+                        Sincroniza servidores Edge en Python con Azure Cloud vía WebSockets sin pérdida de datos.</p>
+                    <div class="tech-stack">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">Azure IoT</span>
+                        <span class="tech-pill">Node.js</span>
+                        <span class="tech-pill">WebSockets</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="project-tag">AI Engineering</span>
+                    <div class="project-title lang-en">AI-Native API Generator</div>
+                    <div class="project-title lang-es">Generador de API Nativo IA</div>
+                    <p class="project-desc lang-en">Automated pipeline using Antigravity & Copilot agents to generate
+                        robust microservices in Go and Rust, enforcing Clean Code standards.</p>
+                    <p class="project-desc lang-es">Pipeline automatizado usando agentes Antigravity y Copilot para
+                        generar microservicios robustos en Go y Rust, forzando estándares Clean Code.</p>
+                    <div class="tech-stack">
+                        <span class="tech-pill">Go</span>
+                        <span class="tech-pill">Rust</span>
+                        <span class="tech-pill">LLM Agents</span>
+                        <span class="tech-pill">CI/CD</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="project-tag">Cloud / Mobility</span>
+                    <div class="project-title lang-en">Real-time Delivery Platform</div>
+                    <div class="project-title lang-es">Plataforma Delivery Real-time</div>
+                    <p class="project-desc lang-en">High-availability platform on AWS with real-time geolocation
+                        tracking, handling thousands of concurrent users and optimizing routes.</p>
+                    <p class="project-desc lang-es">Plataforma de alta disponibilidad en AWS con geolocalización en
+                        tiempo real, manejando miles de usuarios concurrentes y optimización de rutas.</p>
+                    <div class="tech-stack">
+                        <span class="tech-pill">AWS</span>
+                        <span class="tech-pill">Geolocation</span>
+                        <span class="tech-pill">React Native</span>
+                        <span class="tech-pill">Node.js</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="project-tag">Academic / Research</span>
+                    <div class="project-title lang-en">IIoT Telemetry System</div>
+                    <div class="project-title lang-es">Sistema de Telemetría IIoT</div>
+                    <p class="project-desc lang-en">Award-winning thesis project. A complete telemetry and control
+                        solution for industrial tanks using Next.js and custom hardware.</p>
+                    <p class="project-desc lang-es">Proyecto de tesis premiado. Solución completa de telemetría y
+                        control para estanques industriales usando Next.js y hardware a medida.</p>
+                    <div class="tech-stack">
+                        <span class="tech-pill">Next.js</span>
+                        <span class="tech-pill">IoT Hardware</span>
+                        <span class="tech-pill">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray">
+        <div class="container">
+            <h2 class="section-title lang-en">Experience</h2>
+            <h2 class="section-title lang-es">Experiencia</h2>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="company">CITEC</div>
+                            <div class="role lang-en">Staff Engineer & Lead Architect</div>
+                            <div class="role lang-es">Staff Engineer & Arquitecto Líder</div>
+                        </div>
+                        <div class="dates lang-en">2021 – Present</div>
+                        <div class="dates lang-es">2021 – Presente</div>
+                    </div>
+                    <ul>
+                        <li class="lang-en"><strong>AI-Agent Pioneer:</strong> Spearheading "AI-Native Development"
+                            using Antigravity/Copilot for Go & Rust APIs.</li>
+                        <li class="lang-es"><strong>Pionero en Agentes IA:</strong> Lidero el desarrollo "AI-Native"
+                            usando Antigravity/Copilot para APIs en Go y Rust.</li>
+                        <li class="lang-en"><strong>DevOps Impact:</strong> 90% reduction in deployment times via Azure
+                            DevOps pipelines.</li>
+                        <li class="lang-es"><strong>Impacto DevOps:</strong> Reducción del 90% en tiempos de despliegue
+                            vía Azure DevOps.</li>
+                        <li class="lang-en"><strong>FinOps:</strong> 35% reduction in Azure monthly costs.</li>
+                        <li class="lang-es"><strong>FinOps:</strong> Reducción del 35% en costos mensuales de Azure.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="company">HOFFENWORKS</div>
+                            <div class="role lang-en">Senior Full Stack Developer</div>
+                            <div class="role lang-es">Desarrollador Full Stack Senior</div>
+                        </div>
+                        <div class="dates">2014 – 2020</div>
+                    </div>
+                    <ul>
+                        <li class="lang-en">Led an AWS-based Delivery platform with real-time geolocation (+15%
+                            retention).</li>
+                        <li class="lang-es">Lideré plataforma AWS de Delivery con geolocalización (+15% retención).</li>
+                        <li class="lang-en">Refactored legacy PHP systems improving performance by 40%.</li>
+                        <li class="lang-es">Refactorización de legacy PHP mejorando rendimiento en 40%.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="company">EXTRALIM</div>
+                            <div class="role lang-en">Junior Full Stack Developer</div>
+                            <div class="role lang-es">Desarrollador Full Stack Junior</div>
+                        </div>
+                        <div class="dates">2011 – 2014</div>
+                    </div>
+                    <ul>
+                        <li class="lang-en">Developed e-commerce platforms and executed critical DB migrations.</li>
+                        <li class="lang-es">Desarrollo de e-commerce y ejecución de migraciones críticas de BD.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title lang-en">Education</h2>
+            <h2 class="section-title lang-es">Educación</h2>
+
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="company lang-en" style="font-size: 1.2rem;">B.S. in Automation and Robotics Engineering
+                    </div>
+                    <div class="company lang-es" style="font-size: 1.2rem;">Ingeniería en Automatización y Robótica
+                    </div>
+                    <div class="role">INACAP | 2021 – 2024</div>
+                    <p class="lang-en" style="margin-top: 10px;">Distinction: First Place in Academic Ranking.</p>
+                    <p class="lang-es" style="margin-top: 10px;">Distinción: Primer Lugar Académico.</p>
+                </div>
+
+                <div class="card">
+                    <div class="company lang-en" style="font-size: 1.2rem;">Associate of Science in Computer Programming
+                    </div>
+                    <div class="company lang-es" style="font-size: 1.2rem;">Técnico de Nivel Superior Analista
+                        Programador</div>
+                    <div class="role">INACAP | 2012 – 2014</div>
+                    <p class="lang-en" style="margin-top: 10px;">Foundation in Algorithms & Systems.</p>
+                    <p class="lang-es" style="margin-top: 10px;">Base en Algoritmos y Sistemas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section bg-gray">
+        <div class="container">
+            <h2 class="lang-en">Let's build the future.</h2>
+            <h2 class="lang-es">Construyamos el futuro.</h2>
+            <p class="lang-en" style="max-width: 600px; margin: 20px auto;">Whether it's discussing Edge Computing, Rust
+                optimization, or AI implementation.</p>
+            <p class="lang-es" style="max-width: 600px; margin: 20px auto;">Ya sea para discutir sobre Edge Computing,
+                optimización en Rust o implementación de IA.</p>
+
+            <a href="mailto:gabrielserraquiroga@gmail.com" class="btn lang-en">Get in Touch</a>
+            <a href="mailto:gabrielserraquiroga@gmail.com" class="btn lang-es">Contáctame</a>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/gabriel-serra-a4abab348/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/gabriel3312cl" target="_blank">GitHub</a>
+                <a href="mailto:gabrielserraquiroga@gmail.com">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Gabriel Serra Quiroga. Designed with simplicity.</p>
+        </div>
+    </footer>
+
     <script src="assets/js/script.js"></script>
-    <button id="scrollToTopBtn" title="Go to top">▲</button>
 </body>
+
 </html>

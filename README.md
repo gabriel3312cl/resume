@@ -1,231 +1,85 @@
-# Gabriel Serra
+# Gabriel Serra Quiroga
+**Staff Software Engineer & Senior Solutions Architect**
 
-## Solutions Architect
+> Bridging the gap between Industrial Hardware (OT) and Cloud (IT) with AI-Native Engineering.
 
-_Building and deploying high-quality software and infrastructure._ 
+![Go & Rust](https://img.shields.io/badge/Go_&_Rust-Enabled-blue?style=flat-square)
+![AI Agents](https://img.shields.io/badge/AI_Agents-Native-purple?style=flat-square)
+![Azure IoT](https://img.shields.io/badge/Azure_IoT-Certified-0078D4?style=flat-square)
+![Offline-First](https://img.shields.io/badge/Offline--First-Ready-success?style=flat-square)
 
-[Email](mailto:gabrielserraquiroga@gmail.com) | [LinkedIn](https://www.linkedin.com/in/gabriel-serra-a4abab348/) | [GitHub](https://github.com/gabriel3312cl) | [YouTube](https://www.youtube.com/@gabrielserra5644) | 📍 Chile
+---
 
-## Professional Summary
+## Technical Expertise
 
-Solutions Architect with over 10 years in OT/IT convergence. Expert in decoupled and resilient Full Stack architectures (Node.js, Rust, Go, Python, React, Kotlin), ensuring interoperability and scalability without technical debt. I lead infrastructure modernization, CI/CD automation, and observability and quality standards for rapid deployments. Specialist in horizontal management and complex problem resolution, aligning business objectives with technical execution. I foster technical excellence, optimizing costs and elevating the performance of critical distributed systems.
+### AI-Augmented Engineering
+Leveraging autonomous agents to multiply productivity.
+- **Tools**: Antigravity, GitHub Copilot, Claude 3.5, Gemini.
+
+### Core & Languages
+High performance and memory safety focus.
+- **Stack**: Go (Golang), Rust, Node.js (TS), Python.
+
+### Cloud & DevOps
+FinOps driven architecture on Azure.
+- **Stack**: Azure, Terraform, Kubernetes, CI/CD.
+
+---
+
+## Featured Projects
+
+### VOGT-MIC Ecosystem | *Industrial IoT*
+An Offline-First monitoring system for industrial sites. Synchronizes local Python Edge servers with Azure Cloud via WebSockets without data loss.
+- **Tech Stack**: Python, Azure IoT, Node.js, WebSockets.
+
+### AI-Native API Generator | *AI Engineering*
+Automated pipeline using Antigravity & Copilot agents to generate robust microservices in Go and Rust, enforcing Clean Code standards.
+- **Tech Stack**: Go, Rust, LLM Agents, CI/CD.
+
+### Real-time Delivery Platform | *Cloud / Mobility*
+High-availability platform on AWS with real-time geolocation tracking, handling thousands of concurrent users and optimizing routes.
+- **Tech Stack**: AWS, Geolocation, React Native, Node.js.
+
+### IIoT Telemetry System | *Academic / Research*
+Award-winning thesis project. A complete telemetry and control solution for industrial tanks using Next.js and custom hardware.
+- **Tech Stack**: Next.js, IoT Hardware, Python.
+
+---
 
 ## Experience
 
-### Senior Solutions Architect at CITEC
-
-*2021–2025*
-
-- Led incident resolution and technical debt mitigation, coordinating multi-team responses to ensure operational continuity. Diagnosed performance limitations in distributed systems and transformed ambiguous requirements into deterministic technical specifications.
-- Institutionalised reliability standards by implementing advanced observability, defining alerts based on SLAs/SLOs and distributed tracing. Optimised CI/CD pipelines to achieve fast and reversible deployments, establishing rigorous quality governance through staged testing strategies and code coverage.
-- Exercised technical leadership through influence, aligning multiple engineering teams toward common solutions and elevating the level of Senior engineers through mentorship and design reviews.
-
-## Projects
-
-### citec-web
-
-_Full Stack Engineer (TypeScript) profile validation project._ 
-
-**Technologies:** React 18, Next.js 13+, TypeScript, Material UI, Node.js, Docker, Azure Pipelines
-
-Project demonstrating Mid-Senior level competence. Features decoupled architecture, component-based frontend, custom hooks, and SOLID principles. Optimized with next/image and lazy loading. Implements CI/CD with rolling updates and automatic rollback.
-
-### mascotaweb
-
-_MERN Stack (MongoDB, Express, React, Node.js) application._ 
-
-**Technologies:** Node.js, Express, React.js, MongoDB, Socket.io, Azure Cloud Services
-
-Demonstrates solid MERN stack mastery. Features RESTful API architecture, MVC pattern, and cloud integrations. Includes JWT authentication, concurrent processing with Promise.all, and SAS Token generation for Azure storage offloading.
-
-### mic-admin
-
-_Advanced Frontend Admin Dashboard._ 
-
-**Technologies:** React 18, Next.js 14, TypeScript, MUI Data Grid, WebSockets, Chart.js
-
-Mid-Senior to Senior level frontend project. Features modern modular architecture, functional programming with advanced Hooks, resilient WebSocket connections with auto-reconnect, and centralized error handling.
-
-### mic-android
-
-_Native Android IoT Monitoring App._ 
-
-**Technologies:** Kotlin, Android SDK, Jetpack, WebSockets, Gradle Kotlin DSL
-
-Mid-Level native Android application. Features real-time data visualization, socket connection handling, and CI/CD integration. Uses idiomatic Kotlin and scope functions.
-
-### mic-api
-
-_Production-ready Node.js Backend API._ 
-
-**Technologies:** TypeScript, Node.js, Express.js, MongoDB, Socket.io, Docker
-
-Mid-Senior/Senior backend project. Layered architecture (MVC-like) with microservices tendencies. Features robust async/await usage, strict type safety, defensive programming, rate limiting, and graceful shutdown implementation.
-
-### mic-hf
-
-_Full Stack IoT Integration System._ 
-
-**Technologies:** Next.js, Python, Raspberry Pi, Modbus RTU, Socket.io, Docker
-
-Mid-Senior End-to-End system. Connects hardware (PLC/Sensors) to web visualization. Features Event-Driven Architecture, real-time machine state reaction, and hybrid tech stack (JS/Python).
-
-### mic-ios
-
-_Native iOS Real-time App._ 
-
-**Technologies:** Swift 5+, SwiftUI, Combine, Swift Charts, WebSockets
-
-Mid-Level iOS application using MVVM architecture. Features reactive UI, real-time telemetry via WebSockets, and interactive charts. Demonstrates concurrency with GCD and defensive coding.
-
-### monipro-android
-
-_Scalable Native Android Task Management App._ 
-
-**Technologies:** Kotlin, MVVM, Coroutines, Retrofit2, Dagger Hilt, Clean Architecture
-
-Senior level Android project. Features strict MVVM, reactive state management with StateFlow, clean architecture, and advanced image processing/caching logic.
-
-### monipro-api
-
-_Robust Scalable Backend API._ 
-
-**Technologies:** TypeScript, Node.js, Express, MongoDB, Socket.IO, GitHub Actions
-
-Senior Backend project. Features complex aggregation pipelines, recurrence algorithms, robust security (Helmet, Rate-Limit), and comprehensive testing infrastructure.
-
-### monipro-portal
-
-_Senior Level Enterprise Portal._ 
-
-**Technologies:** React 18, Next.js 14 (App Router), Zustand, TanStack Query, Docker
-
-Senior Full-Stack frontend project. Modular feature-based architecture. Implements advanced security (Web Crypto API), server-side rendering, and complex state management.
-
-### sdv-admin
-
-_BFF Architecture Admin Panel._ 
-
-**Technologies:** TypeScript, Next.js 14, MUI v6, Axios, Socket.io
-
-Mid-Senior/Senior project. Implements Backend-for-Frontend (BFF) pattern. Features reusable generic components (DRY), persistent state encryption, and optimized rendering with useMemo/useCallback.
-
-### sdv-android
-
-_Modern Native Android App with AI._ 
-
-**Technologies:** Kotlin, Android Jetpack, Hilt, Coroutines, ML Kit
-
-Mid-Senior project. MVVM architecture with Dagger Hilt injection. Integrates Google ML Kit for face detection and implements custom caching strategies.
-
-### sdv-api
-
-_Azure Integrated Backend API._ 
-
-**Technologies:** TypeScript, Node.js, MongoDB, Azure Cognitive Services, Redis
-
-Senior level backend integration. Features biometric face recognition via Azure, Blob Storage integration, and robust CI/CD pipelines.
-
-### sgc-coordinador
-
-_Hybrid Stack Coordination System._ 
-
-**Technologies:** JavaScript, Node.js, Python, React, Material UI
-
-Mid-Level hybrid system. Features MVC backend, React frontend, and Python automation scripts. Implements pagination, cryptographic hashing, and batch processing.
-
-### sgfc-admin
-
-_Next.js 15 Admin Dashboard._ 
-
-**Technologies:** Next.js 15, React 19, TanStack Query, Zustand, Socket.IO
-
-Cutting edge stack project. Uses Next.js 15 App Router and React 19. Features BFF pattern, hybrid state management, and real-time hardware monitoring.
-
-### sgfc-api
-
-_High Performance Ticket API._ 
-
-**Technologies:** TypeScript, Express v5, MongoDB, Zod, Socket.IO
-
-Senior backend project. Features strict validation with Zod, complex MongoDB aggregations for analytics, and high-concurrency handling with Promise.all.
-
-### sgfc-kiosk
-
-_Python Kiosk/IoT System._ 
-
-**Technologies:** Python 3.11, Kivy, FastAPI, WebSockets, AsyncIO
-
-Mid-Senior Offline-First system. Hybrid architecture with local SQLite island server. Features hardware integration (Thermal Printers, Touch), multiprocessing, and robust error handling.
-
-### sgfc-pos
-
-_Android POS System._ 
-
-**Technologies:** Kotlin, MVVM, Retrofit, Socket.IO, ViewBinding
-
-Mid-Level POS application. MVVM architecture with reactive LiveData. Handles real-time ticket updates via WebSockets and manages session persistence.
-
-
-## Skills
-
-- **Cloud Platforms:** Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP)
-
-- **Databases:** PostgreSQL, MySQL, MongoDb, SQLite
-
-- **DevOps, CI/CD & IaC:** CI/CD, Docker, GitHub Actions, Azure DevOps Server, IaC, Terraform
-
-- **Mobile Development:** React Native, Android Studio, Xcode, Swift, Kivy
-
-- **Programming Languages:** Python, JavaScript, TypeScript, Java, Node.js, Kotlin, Swift, PHP, Bash
-
-- **Testing:** Cypress
-
-- **Version Control:** Git, GitHub, GitLab, Azure Repos
-
-- **Web Development:** React, Next.js, Socket.IO, MUI
-
+### CITEC | **Staff Engineer & Lead Architect**
+*2021 – Present*
+- **AI-Agent Pioneer**: Spearheading "AI-Native Development" using Antigravity/Copilot for Go & Rust APIs.
+- **DevOps Impact**: 90% reduction in deployment times via Azure DevOps pipelines.
+- **FinOps**: 35% reduction in Azure monthly costs.
+
+### HOFFENWORKS | **Senior Full Stack Developer**
+*2014 – 2020*
+- Led an AWS-based Delivery platform with real-time geolocation (+15% retention).
+- Refactored legacy PHP systems improving performance by 40%.
+
+### EXTRALIM | **Junior Full Stack Developer**
+*2011 – 2014*
+- Developed e-commerce platforms and executed critical DB migrations.
+
+---
 
 ## Education
 
-### Bachelor in Robotics Engineering
+### B.S. in Automation and Robotics Engineering
+**INACAP** | 2021 – 2024
+- *Distinction: First Place in Academic Ranking.*
 
-*Instituto Profesional INACAP (2021 – 2024)*
+### Associate of Science in Computer Programming
+**INACAP** | 2012 – 2014
+- *Foundation in Algorithms & Systems.*
 
-- First academic place 2024.
+---
 
+## Let's build the future.
+Whether it's discussing Edge Computing, Rust optimization, or AI implementation.
 
-### Associate Degree in Computer Information Technology
+[Get in Touch](mailto:gabrielserraquiroga@gmail.com)
 
-*Centro de Formación Técnica INACAP (2012 – 2014)*
-
-
-
-## Certifications
-
-### Cisco Networking Academy
-
-- Introduction to Cybersecurity
-
-### Instituto Profesional INACAP
-
-- Evaluation and Maintenance of Industrial Networks
-
-- Innovation and Entrepreneurship
-
-- Maintenance and Operation of Industrial Robot
-
-- PLC and Controller Programming
-
-
-## Courses
-
-### Udemy
-
-- HashiCorp Certified: Terraform associate 2025
-
-- Cypress: E2E Test Automation
-
-- Microsoft Azure Fundamentals AZ-900
-
-- Google Cloud Digital Leader
+[LinkedIn](https://www.linkedin.com/in/gabriel-serra-a4abab348/) • [GitHub](https://github.com/gabriel3312cl)
